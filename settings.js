@@ -57,6 +57,8 @@ const characters = [
 			["Birthday", "02/02"],
 			["Height", "184cm"],
 			["Gender", "Male (he/him)"],
+			["Extras", "h"],
+			["Pinterest Board", "https://pin.it/iTCcUO1oE"],
 			["Artists", "h"],
 			["BlueSunfish", "https://bluesunfish.carrd.co"]
 		],
@@ -87,6 +89,8 @@ const characters = [
 			["Race", "Mottlefolk"],
 			["Height", "50cm"],
 			["Gender", "Male (he/him)"],
+			["Extras", "h"],
+			["Pinterest Board", "https://pin.it/nv0Y5Np1X"],
 			["Artists", "h"],
 			["BlueSunfish", "https://bluesunfish.carrd.co"]
 		],
@@ -129,6 +133,8 @@ const characters = [
 			["Birthday", "29/08"],
 			["Height", "165cm"],
 			["Gender", "Female (she/her)"],
+			["Extras", "h"],
+			["VSona", "https://vsona.co/lyra-arnwood"],
 			["Artists", "h"],
 			["KazuoNT", "https://vgen.co/KazuoNT"]
 		],
@@ -136,6 +142,29 @@ const characters = [
 			["ADEBB3", "Eyes"],
 			["954535", "Hair"],
 			["DCA864", "Hair Tips"],
+		],
+	},
+	{
+		title: ["t", "Haris"],
+		angles: [
+			["Haris (NoahEvergreen)", "images/egHaris.png"]
+		],
+		angleToggles: [
+		],
+		outfits: [
+		],
+		info: [
+			["Character Details", "h"],
+			["Name", "Haris"],
+			["Age", "28"],
+			["Birthday", "??/??"],
+			["Race", "Half-Zombie"],
+			["Height", "174cm"],
+			["Gender", "Male (he/him)"],
+			["Artists", "h"],
+			["NoahEvergreen", "https://www.youtube.com/@noahevergreen"]
+		],
+		colors: [
 		],
 	},
 	{
