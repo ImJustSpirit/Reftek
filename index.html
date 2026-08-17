@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Reftek testing ground</title>
+	<link rel="stylesheet" type="text/css" href="reftek-base.css">
+	<link rel="preload">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
+	<style>
+		/* Temporary solution until the beta to keep updates simpler */
+		.single-item {
+			justify-content: center !important;
+		}
+	</style>
+</head>
+<body>
+	<div class="main">
+		<section class="angles" id="anglesSection">
+			<h1 id="anglesTitle"></h1>
+			<div class="preview" id="angleguy"></div>
+			<div id="angleSelector" class="selector">
+				<button id="btn1" onclick="prevAngle()">←</button>
+				<b id="anglesText"></b>
+				<button id="btn2" onclick="nextAngle()">→</button>
+			</div>
+			<div class="toggle">
+				<h5 id="hidetext">Hide</h5>
+				<form id="angleToggles">
+				</form>
+			</div>
+		</section>
+		<section class="outfits" id="outfitsSection">
+			<h1 id="outfitsTitle"></h1>
+			<div class="preview"  id="outfitguy"></div>
+			<div id="outfitSelector" class="selector">
+				<button id="btn3" onclick="prevOutfit()">←</button>
+				<b id="outfitsText"></b>
+				<button id="btn4" onclick="nextOutfit()">→</button>
+			</div>
+		</section>
+		<section class="data" id="dataSection">
+			<h1 id="dataTitle"></h1>
+			<div id="charSelector" class="selector2">
+				<button id="btn5" onclick="prevCharacter()">←</button>
+				<div id="title">
+					
+				</div>
+				<button id="btn6" onclick="nextCharacter()">→</button>
+			</div>
+			<table id="infoTable">
+			</table>
+			<h3 id="colorHeader">Colours</h3>
+			<table id="colorTable">
+				<thead>
+					<th class="rowfit">Colour</th>
+					<th style="text-align: left;">Used on</th>
+					<th class="rowfit">Hex #</th>
+					<th class="rowfit"></th>
+				</thead>
+			</table>
+			<h3 id="charHeader">Characters</h3>
+			<table id="charTable">
+				<thead>
+					<th style="text-align: left;">Character</th>
+					<th class="rowfit"></th>
+				</thead>
+			</table>
+		</section>
+	</div>
+</body>
+<script src="settings.js"></script>
+<script src="script.js"></script>
+</html>

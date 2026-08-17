@@ -1,0 +1,364 @@
+:root {
+    /* Overall */
+    --margins: 10px;
+    --bg: #282828;
+    --primary: #ebdbb2;
+    --border: 1px;
+    --radius: 0px;
+    --font: "sans"; /* pick from sans, serif, or mono */
+
+    /* Sections */
+    --bg-trans: rgba(0,0,0,0.0);
+    --shadow-x: 0px;
+    --shadow-y: 0px;
+    --shadow-blur: 0px;
+    --shadow-color: rgba(0,0,0,0.2);
+
+    /* Section headers */
+    --header-bg: #bdae93;
+    --header-text: #282828;
+
+    /* Info */
+    --button-bg: #bdae93;
+    --button-text: #282828;
+    --button-hover-bg: #3c3836;
+    --button-hover-text: #ebdbb2;
+}
+
+@font-face {
+    font-family: "sans";
+    src: url("fonts/IBMPlexMono-Regular.ttf");
+}
+
+@font-face {
+    font-family: "serif";
+    src: url("fonts/IBMPlexMono-Regular.ttf");
+}
+
+@font-face {
+    font-family: "mono";
+    src: url("fonts/IBMPlexMono-Bold.ttf");
+}
+
+@font-face {
+    font-family: "mono";
+    font-weight: bold;
+    src: url("fonts/IBMPlexMono-Bold.ttf");
+}
+
+@media (orientation: portrait) {
+    div.main {
+        width: 100%;
+        justify-content: space-between;
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color: var(--bg);
+        color: var(--primary);
+        box-sizing: border-box;
+        margin: 0;
+        padding: var(--margins);
+        height: 100%;
+        font-family: var(--font);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        border-radius: var(--radius);
+    }
+    section {
+        background-color: var(--bg-trans);
+        overflow: hidden;
+        margin-bottom: calc(var(--margins) * 2);
+        border: var(--border) solid var(--primary);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow-x) var(--shadow-y) var(--shadow-blur) var(--shadow-color);
+    }
+    .sans {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    button {
+        font-size: 16px;
+    }
+    .preview {
+        height: 25rem;
+    }
+}
+
+@media (orientation: landscape) {
+    div.main {
+        display: grid;
+        grid-template-columns: repeat(2, 5fr) 3.7fr;
+        grid-template-rows: 1fr;
+        grid-column-gap: var(--margins);
+        grid-row-gap: var(--margins);
+        width: 100%;
+        justify-content: space-between;
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color: var(--bg);
+        color: var(--primary);
+        box-sizing: border-box;
+        margin: 0;
+        padding: var(--margins);
+        font-family: "mono";
+        background-image: none;
+        /* background-image: url("images/logo.svg"); */
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    section {
+        background-color: var(--bg-trans);
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        border: var(--border) solid var(--primary);
+        border-radius: var(--radius);
+        height: calc(100vh - (var(--margins) * 3));
+        box-shadow: var(--shadow-x) var(--shadow-y) var(--shadow-blur) var(--shadow-color);
+    }
+
+    section .data, #dataSection {
+        overflow: scroll;
+    }
+    
+}
+
+.angles {
+    grid-area: 1 / 1 / 2 / 2;
+}
+.angles.no-outfit {
+    grid-area: 1 / 1 / 2 / 3;
+}
+
+.outfits {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.sans {
+    grid-area: 1 / 3 / 2 / 4;
+}
+
+h1 {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    margin: 0;
+    padding: 10px;
+    font-size: 16px;
+    border-bottom: var(--border) solid;
+    font-family: var(--font);
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    margin: 10px 0px;
+
+}
+
+h3 {
+    margin: 0;
+    text-align: center;
+    font-family: var(--font);
+    padding: 5px;
+    font-size: 20px;
+    letter-spacing: 2px;
+    border-bottom: 1px solid;
+    text-transform: uppercase;
+}
+
+h5 {
+    font-family: var(--font);
+    margin: 0;
+}
+
+.tableSeparator {
+    margin: 0;
+    text-align: center;
+    font-family: "mono";
+    padding: 5px;
+    font-size: 12px;
+    border-bottom: 1px solid;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+#title {
+    display: flex;
+    justify-content: center;
+    word-break: break-all;
+}
+
+ul {
+    margin: 0;
+    padding-left: 15px;
+}
+
+#title h2 {
+    width: 100%;
+    font-family: var(--font);
+}
+
+#title img {
+    padding: 10px;
+}
+.selector, .selector2 {
+    display: flex;
+    width: 100%;
+    padding: 20px;
+    color: inherit;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+.selector {
+    font-size: 18px;
+    text-decoration: none;
+}
+.selector2 {
+    padding: 10px 20px;
+}
+
+.preview {
+    flex: 1;
+    overflow: auto;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+img.bg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary);
+}
+
+.selector b {
+    font-family: var(--font);
+}
+
+.selector button, .selector2 button {
+    display: block;
+}
+
+.selector button:hover, .selector2 button:hover {
+    transform: scale(1.1);
+}
+
+.selector button:active, .selector2 button:active {
+    transform: scale(0.9);
+}
+
+table {
+    font-size: 14px;
+    width: 100%;
+}
+
+td {
+    border-bottom: 1px dotted;
+    font-family: var(--font);
+}
+
+th {
+    font-family: var(--font);
+    border-right: 1px solid;
+    border-bottom: 1px dotted;
+    text-align: right;
+    padding-right: 3px;
+}
+
+.rowfit {
+    width: 1%;
+    white-space: nowrap;
+}
+
+.hasTooltip {
+    border-bottom: 1px dashed white;
+}
+
+section.sans {
+    display: flex;
+    justify-content: initial !important;
+}
+
+.hex {
+    font-family: "mono";
+    letter-spacing: 1px;
+}
+
+.mono {
+    font-family: "mono";
+    font-size: 10px;
+}
+
+
+table tr td {
+    border-right: 1px dotted;
+
+}
+
+td button {
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border: 0;
+    font-family: "mono";
+    border-radius: var(--radius);
+}
+
+button:hover {
+    background-color: var(--button-hover-bg);
+    color: var(--button-hover-text);
+}
+
+button:active {
+    background-color: black;
+    color: white;
+}
+
+.selector button, .selector2 button {
+    background-color: var(--primary);
+    color: var(--bg);
+    border: 0;
+    border-radius: var(--radius);
+}
+
+h6 {
+    margin: 2px;
+}
+h6 a {
+    padding-left: 5px;
+    font-family: var(--font);
+    font-weight: normal;
+    font-style: italic;
+    color: var(--primary);
+}
+
+h6 a:hover {
+    color: blue;
+}
+
+.toggle {
+    display: inline;
+    position: absolute;
+    top: 60px;
+    left: 20px;
+}
+
+.toggle form {
+    font-family: var(--font);
+    font-size: 10px;
+}
+
+.toggle form input {
+    width: 10px;
+    height: 10px;
+}
